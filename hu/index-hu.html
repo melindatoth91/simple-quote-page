@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <title>Simple Quote Page</title>
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <meta name="description" content="bootstrap-buttons">
+  <link rel="stylesheet" type="text/css" href="main-hu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text&#124;Julius+Sans+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header class="cover">
+    <div class="wrapper">
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Select Language 
+           <i class="fa fa-caret-down"></i>
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="https://melindatoth91.github.io/simple-quote-page/hu/" class=" btn btn-hu"><i class="fa fa-flag"></i> Hungarian</a>
+          <a href="https://melindatoth91.github.io/simple-quote-page/" class=" btn btn-en"><i class="fa fa-flag"></i> English</a>
+         </div>
+      </div>
+      <div class="background">
+        <p class="quote">"Nem az a szabadság, hogy azt teheted, amit akarsz, hanem hogy nem kell megtenned, amit nem akarsz."</p>
+        <p class="author">- Jean-Jacques Rousseau</p>
+      </div>
+    </div>
+    <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+  </header>
+</body>
+</html>
