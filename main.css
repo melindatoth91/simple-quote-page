@@ -21,36 +21,112 @@ body {
 
 .wrapper {
   display: table-cell;
-  vertical-align: top;
-  padding-top: 4rem;
+  vertical-align: middle;
   width: 90%;
   margin: 0 auto;
   text-align: center;
+  position: relative;
 }
 
 .quote {
   font-family: 'Julius Sans One', sans-serif;
-  font-size: 2.5rem;
-  margin: 2rem;
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
   line-height: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1224px){
+  .quote {
+  font-size: 3rem;
+  line-height: 4rem;
+}
 }
 
 
 .author {
   font-style: italic;
-  font-size: 1.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
   font-family: 'Crimson Text', serif;
   
 }
 
-.author::before {
-  display: inline-block;
-  content: "";
-  height: 1px;
-  width: .5rem;
-  background-color: #000;
-  vertical-align: middle;
-  margin: 0.5rem;
+
+@media screen and (min-width: 1224px){
+  .author {
+    font-size: 1.5rem;
+    padding: .5rem;
+    letter-spacing: .125rem;
 }
+}
+
+.background {
+  border: 1px solid hsla(0,0%,50%,.1);
+  border-radius: 4px;
+  background-color: hsla(0,0%,100%,.3);
+  margin: 2rem 2rem;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 1224px){
+  .background {
+    margin: 5rem;
+    padding: 2rem;
+}
+}
+
+.dropbtn {
+  text-decoration: none;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: .8rem;
+  line-height: 1.42857143;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.dropdown {
+  vertical-align: top;
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  display: block;
+  text-decoration: none;
+  font-size: .8rem;
+  font-weight: 700;
+  color: #333;
+  border-color: #ccc;
+  text-align: left;  
+  font-family: 'Julius Sans One', sans-serif;
+  background-color: #fff;
+  padding: .5rem 1rem;
+}
+
+
+.dropbtn:hover, .dropbtn:focus, .dropdown-content a:hover, .dropdown-content a:focus {
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.show {display: block;}
+
